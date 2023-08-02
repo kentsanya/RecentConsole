@@ -2,15 +2,20 @@
 {
     internal class Program
     {
+        //точка входу в программу
         static void Main(string[] args)
         {
+            //Створювали гру через метод ініціалізації даних
             Game game = InitData();
+            //виводить ім'я переможця на консоль
             Console.WriteLine($"Player win {game.Start()}");
 
         }
 
+        //метод ініціалізації даних
         static Game InitData() 
         {
+            //Ініціалізаця даних для першого гравця
             Ship[] shipsplayer1 = new Ship[5];
             for (int i = 0; i < 5; i++) 
             {
@@ -20,7 +25,7 @@
                 string s=Console.ReadLine();
                 shipsplayer1[i] = new Ship($"ship {i}", s, x);
             }
-
+            //Ініціалізаця даних для другого гравця
             Ship[] shipsplayer2 = new Ship[5];
             for (int i = 0; i < 5; i++)
             {
